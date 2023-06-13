@@ -2,9 +2,14 @@ var wins=0
 var losses=0
 var ties= 0
 var choices= ["R","P","S"]
+var playAgain= true
+
+while (playAgain) {
 var humanChoice= prompt("Choose R, P, or S")
 var randomNum= Math.floor(Math.random()*3) //rounds number down, math.random*3 gives us the number, Math.floor rounds down
 var cpuChoice = choices[randomNum]  //makes cpu choose 0, 1 or 2 randomly, which corresponds to an item in the array "choices"
+var playAgain= true
+
 
 //players choose RPS
 console.log(humanChoice)
@@ -28,9 +33,10 @@ if (
 }
 
 alert("Wins: "+wins+
- "\nTies: "+ties+
-"\nLosses: "+losses)
+"\nTies: "+ties+
+"\nLosses: "+losses) // \n adds a new line
 
-//ask user "Do you want to play again?"
- //if yes, restart game
- //if no, exit game
+playAgain= confirm("Do you want to play again?")
+}
+
+alert("Play again soon!")

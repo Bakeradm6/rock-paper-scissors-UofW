@@ -1,5 +1,5 @@
 //variables
- //numWins= 0
+ //numWins
  //numLosses
  //numTies
 
@@ -12,16 +12,19 @@
  //if humanChoice is p and cpuChoice is r
  //if humanChoice is r and cpuChoice is s
 //we win
-//alert that we won
+//window.alert that we won
 //increase numWins by 1
 
-//if humanChoice and cpuChoice is equal ==
+//if humanChoice === cpuChoice
 //tie
- //alert that we tied
+ //window.alert that we tied
  //increase numTies by 1
 
 //else
 //lose
- //alert that we lost
+ //window.alert that we lost
  //increases numLosses by 1
 
+//ask user "Do you want to play again?"
+ //if yes, restart game
+ //if no, exit game
