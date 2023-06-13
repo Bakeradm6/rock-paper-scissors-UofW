@@ -4,6 +4,7 @@ var ties= 0
 var choices= ["R","P","S"]
 var humanChoice= prompt("Choose R, P, or S")
 var randomNum= Math.floor(Math.random()*3) //rounds number down, math.random*3 gives us the number, Math.floor rounds down
+var cpuChoice = choices[randomNum]  //makes cpu choose 0, 1 or 2 randomly, which corresponds to an item in the array "choices"
 
 //players choose RPS
 console.log(humanChoice)
@@ -11,22 +12,24 @@ console.log(humanChoice)
 console.log(choices[randomNum])
     
 //compare the choices
- //if humanChoice is s and cpuChoice is p
- //if humanChoice is p and cpuChoice is r
- //if humanChoice is r and cpuChoice is s
-//we win
-//window.alert that we won
-//increase numWins by 1
+if (
+ humanChoice === "S" && cpuChoice === "P" ||
+ humanChoice === "R" && cpuChoice === "S" ||
+ humanChoice === "P" && cpuChoice === "R"
+) { 
+ alert("You won!")  //displays You won!
+ wins++ //adds 1 to var wins
+} else if (humanChoice === cpuChoice){
+ alert("You tied")
+ ties++
+} else {
+ alert("You lost...")
+ losses++
+}
 
-//if humanChoice === cpuChoice
-//tie
- //window.alert that we tied
- //increase numTies by 1
-
-//else
-//lose
- //window.alert that we lost
- //increases numLosses by 1
+alert("Wins: "+wins+
+ "\nTies: "+ties+
+"\nLosses: "+losses)
 
 //ask user "Do you want to play again?"
  //if yes, restart game
